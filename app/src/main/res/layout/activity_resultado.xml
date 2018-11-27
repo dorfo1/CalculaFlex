@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultadoActivity">
+
+    <ImageView
+        android:id="@+id/resultado_banner"
+        android:src="@drawable/banner"
+        style="@style/banner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    
+    <View
+        android:id="@+id/resultado_view1"
+        style="@style/divider"
+        app:layout_constraintTop_toBottomOf="@id/resultado_banner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/resultado_sugestao_label"
+        android:text="Sugestão abastecimento"
+        style="@style/header_titulo"
+        android:drawableStart="@drawable/sugestao_icon"
+        app:layout_constraintTop_toBottomOf="@id/resultado_view1"
+        app:layout_constraintStart_toStartOf="@id/resultado_view1"/>
+
+
+    <View
+        android:id="@+id/resultado_view2"
+        style="@style/divider"
+        app:layout_constraintTop_toBottomOf="@id/resultado_sugestao_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/resultado_sugestao_valor"
+        android:textStyle="bold"
+        style="@style/label_valor"
+        android:text="Etanol"
+        app:layout_constraintTop_toBottomOf="@id/resultado_view2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <View
+        android:id="@+id/resultado_view3"
+        style="@style/divider"
+        app:layout_constraintTop_toBottomOf="@id/resultado_sugestao_valor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/resultado_gasto_label"
+        android:text="Gasto R$/Km"
+        style="@style/header_titulo"
+        android:drawableStart="@drawable/coin_icon"
+        app:layout_constraintTop_toBottomOf="@id/resultado_view3"
+        app:layout_constraintStart_toStartOf="@id/resultado_view3"/>
+
+
+    <View
+        android:id="@+id/resultado_view4"
+        style="@style/divider"
+        app:layout_constraintTop_toBottomOf="@id/resultado_gasto_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/resultado_gasolina_valor"
+        style="@style/label_valor"
+        android:text="0.30"
+        app:layout_constraintTop_toBottomOf="@id/resultado_view4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/resultado_etanol_valor"/>
+
+    <TextView
+        android:id="@+id/resultado_etanol_valor"
+        style="@style/label_valor"
+        android:text="0.30"
+        app:layout_constraintTop_toBottomOf="@id/resultado_view4"
+        app:layout_constraintStart_toEndOf="@id/resultado_gasolina_valor"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    
+    <TextView
+        android:id="@+id/resultado_gasolina_label"
+        style="@style/header_secundario"
+        android:gravity="center"
+        android:textStyle="normal"
+        android:text="Gasolina"
+        app:layout_constraintTop_toBottomOf="@id/resultado_gasolina_valor"
+        app:layout_constraintStart_toStartOf="@id/resultado_gasolina_valor"
+        app:layout_constraintEnd_toEndOf="@id/resultado_gasolina_valor"/>
+
+    <TextView
+        android:id="@+id/resultado_etanol_label"
+        style="@style/header_secundario"
+        android:gravity="center"
+        android:textStyle="normal"
+        android:text="Etanol"
+        app:layout_constraintTop_toBottomOf="@id/resultado_etanol_valor"
+        app:layout_constraintStart_toStartOf="@id/resultado_etanol_valor"
+        app:layout_constraintEnd_toEndOf="@id/resultado_etanol_valor"/>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
